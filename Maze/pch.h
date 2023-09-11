@@ -4,7 +4,6 @@
 #include <windows.h>
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 struct Pos
@@ -24,6 +23,7 @@ struct Pos
 		Pos ret;
 		ret.y = y + other.y;
 		ret.x = x + other.x;
+		return ret;
 	}
 
 	Pos& operator+=(Pos& other)
@@ -31,7 +31,6 @@ struct Pos
 		y += other.y;
 		x += other.x;
 		return *this;
-
 	}
 
 	int32 y = 0;
@@ -47,4 +46,3 @@ enum Dir
 
 	DIR_COUNT = 4
 };
-
